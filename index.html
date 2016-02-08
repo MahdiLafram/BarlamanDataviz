@@ -30,10 +30,10 @@
     </div>
 
     <script>
-    
+
       var dataArray = [107, 60, 52, 47, 39, 32, 23, 18, 4, 2, 2, 2, 2, 1, 1, 1, 1, 1];
 
-      var width = 800;
+      var width = 1000;
       var height = 1000;
 
       var widthScale = d3.scale.linear()
@@ -44,8 +44,13 @@
                     .domain([0, 107])
                     .range(["yellow", "red"])
 
-      var canvas = d3.select("body").append("svg").attr("width", width).attr("height", height);
+      var axis = d3.svg.axis()
+                   .scale(widthScale);
 
+      var canvas = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
 
       var bars = canvas.selectAll("rect")
                        .data(dataArray)
@@ -55,6 +60,12 @@
                         .attr("height", 50)
                         .attr("fill", function(d) { return color(d) })
                         .attr("y", function(d, i) { return i * 55});
+
+      canvas.append("g")
+            .attr("transform", "translate(0, -6)")
+            .attr("fill", "grey")
+            .call(axis);
+
     </script>
     
 
