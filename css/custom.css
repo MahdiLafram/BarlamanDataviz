@@ -4,6 +4,26 @@
 	font-family: Roboto;	
 }
 
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+	background-color: #b92b27;
+}
+
+a {
+	color: #2c3e50;
+}
+
+h1 {
+	color: #b92b27;
+}
+
+a:hover {
+	color: #b92b27;
+}
+
 .nav {
 	margin-bottom: 10px;
+}
+
+#footer {
+	padding-top: 25px;
 }
