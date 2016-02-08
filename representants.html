@@ -1,0 +1,91 @@
+<head>
+    <meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chambre des représentants</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- D3.js library -->
+    <script src="js/d3.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <div class="container">
+    <div class="nav">
+        <ul class="nav nav-pills nav-justified">
+          <li role="presentation"><a href="index.html">Home</a></li>
+          <li role="presentation" class="active"><a href="representants.html">Chambre des représentants</a></li>
+          <li role="presentation"><a href="conseillers.html">Chambre des conseillers</a></li>
+          <li role="presentation"><a href="about.html">A propos</a></li>
+        </ul>
+      </div>
+    </div>
+
+     <div class="container">
+      <h1><strong>Chambre des Représentants</strong></h1>
+      <hr>
+    </div>
+
+    <script>
+
+      var dataArray = [107, 60, 52, 47, 39, 32, 23, 18, 4, 2, 2, 2, 2, 1, 1, 1, 1, 1];
+
+      var width = 1000;
+      var height = 1000;
+
+      var widthScale = d3.scale.linear()
+                         .domain([0, 107])
+                         .range([0, width]);
+
+      var color = d3.scale.linear()
+                    .domain([0, 107])
+                    .range(["yellow", "red"])
+
+      var axis = d3.svg.axis()
+                   .scale(widthScale);
+
+      var canvas = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+      var bars = canvas.selectAll("rect")
+                       .data(dataArray)
+                       .enter()
+                        .append("rect")
+                        .attr("width", function(d) { return widthScale(d) })
+                        .attr("height", 50)
+                        .attr("fill", function(d) { return color(d) })
+                        .attr("y", function(d, i) { return i * 55});
+
+      canvas.append("g")
+            .attr("transform", "translate(0, -6.5)")
+            .attr("fill", "grey")
+            .call(axis);
+
+      bars.transition()
+            .duration(2000)
+            .attr("y", function(d, i) { return i * 55});
+            
+
+    </script>
+
+    <div class="container">
+      <hr>
+      <p>(c) Mahdi Lafram, 2016.</p>
+    </div>
+  </body>
+</html>
