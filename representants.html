@@ -41,12 +41,43 @@
 
     <script>
 
-      var dataArray = [107, 60, 52, 47, 39, 32, 23, 18, 4, 2, 2, 2, 2, 1, 1, 1, 1, 1];
+      var data = [107, 60, 52, 47, 39, 32, 23, 18, 4, 13];
+      var r = 0;
 
-      var width = 1000;
-      var height = 1000;
+      var width = 500;
+      var height = 360;
 
-      var widthScale = d3.scale.linear()
+      var canvas = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+      var color = d3.scale.ordinal()
+                    .domain([4, 107])
+                    .range(["silver", "olive", "maroon", "lime", "yellow", "blue", "navy", "fuchsia", "aqua", "teal"]);
+
+      var group = canvas.append("g")
+                        .attr("transform", "translate(220, 180)");
+
+      var arc = d3.svg.arc()
+                  .innerRadius(180)
+                  .outerRadius(r);
+
+      var pie = d3.layout.pie()
+                  .value(function(d) { return d;});
+
+      var arcs = group.selectAll(".arc")
+                      .data(pie(data))
+                      .enter()
+                        .append("g")
+                        .attr("class", "arc");
+
+      arcs.append("path")
+          .attr("d", arc)
+          .attr("fill", function(d) { return color(d.data);});
+
+
+      /*var widthScale = d3.scale.linear()
                          .domain([0, 107])
                          .range([0, width]);
 
@@ -78,7 +109,7 @@
 
       bars.transition()
             .duration(2000)
-            .attr("y", function(d, i) { return i * 55});
+            .attr("y", function(d, i) { return i * 55});*/
             
 
     </script>
