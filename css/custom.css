@@ -1,16 +1,17 @@
-* {
+body {
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 20px;
 	font-family: Roboto;	
 }
 
-.arc:hover {
-	fill: brown;
-}
 
 ::selection {
 	background-color: #b92b27;
 	color: white;
+}
+
+#sort {
+	 margin-bottom: 20px;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
