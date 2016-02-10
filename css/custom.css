@@ -4,6 +4,10 @@
 	font-family: Roboto;	
 }
 
+.arc:hover {
+	fill: brown;
+}
+
 ::selection {
 	background-color: #b92b27;
 	color: white;

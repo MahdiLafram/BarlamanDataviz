@@ -11,6 +11,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
 
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
     <!-- D3.js library -->
     <script src="js/d3.min.js"></script>
 
@@ -36,13 +39,14 @@
     </div>
 
      <div class="container">
-      <h1><strong>Chambre des représentants</strong></h1>
+      <h1 class="animated fadeInDown"><strong>Chambre des représentants</strong></h1>
       <hr>
     </div>
 
     <script>
 
       var data = [107, 60, 52, 47, 39, 32, 23, 18, 4, 13];
+      var label = ["PJD", "PAM", "stuff"];
       var r = 90;
 
       var width = 500;
@@ -53,9 +57,7 @@
                     .attr("width", width)
                     .attr("height", height);
 
-      var color = d3.scale.ordinal()
-                    .domain([4, 107])
-                    .range(["silver", "olive", "maroon", "lime", "yellow", "blue", "navy", "fuchsia", "aqua", "teal"]);
+      var color = d3.scale.category20();
 
       var group = canvas.append("g")
                         .attr("transform", "translate(220, 180)");
@@ -76,7 +78,6 @@
       arcs.append("path")
           .attr("d", arc)
           .attr("fill", function(d) { return color(d.data);});
-
 
       /*var widthScale = d3.scale.linear()
                          .domain([0, 107])
