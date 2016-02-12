@@ -18,6 +18,11 @@ body {
 	background-color: #b92b27;
 }
 
+#logo {
+	width: 320px;
+	height: 140px;
+}
+
 a {
 	color: #2c3e50;
 }

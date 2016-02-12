@@ -34,6 +34,8 @@
       .attr("d", arc)
       .attr("fill", function(d) { return color(d.data);});
 
+  
+
 /*var widthScale = d3.scale.linear()
                        .domain([0, 107])
                        .range([0, width]);
