@@ -1,4 +1,4 @@
-# deputes-parlement
+# Barlaman Dataviz
 Interactive data visualization of Moroccan parliament components
 
 # Implementation
