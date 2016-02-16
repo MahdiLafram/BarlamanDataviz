@@ -33,3 +33,9 @@
   arcs.append("path")
       .attr("d", arc)
       .attr("fill", function(d) { return color(d.data);});
+
+  arcs.append("text")
+  .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+  .attr("text-anchor", "middle")
+  .attr("color", "white")
+  .text( function (d) {return d.data; });

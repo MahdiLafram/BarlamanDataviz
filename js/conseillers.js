@@ -1,5 +1,5 @@
 
-  var data = [24, 23, 12, 10, 8, 8, 6, 5, 4, 4, 3, 3, 3, 2, 1, 1, 1, 1, 1];
+  var data = [24, 23, 12, 10, 8, 8, 6, 5, 4, 4, 16];
 
   var width = 420;
   var height = 360;
@@ -10,7 +10,7 @@
                   .attr("width", width)
                   .attr("height", height);
 
-  var color = d3.scale.category20();
+  var color = d3.scale.category10();
 
   var group = canvas.append("g")
                     .attr("transform", "translate(220, 180)");
@@ -31,5 +31,10 @@
   arcs.append("path")
       .attr("d", arc)
       .attr("fill", function(d) { return color(d.data);});
+
+  arcs.append("text")
+  .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+  .attr("text-anchor", "middle")
+  .text( function (d) {return d.data; });
 
 
