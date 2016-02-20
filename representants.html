@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/animate.css">
 
     <!-- D3.js library -->
-    <script src="js/d3.min.js"></script>
+    <script src="js/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,9 +44,6 @@
     </div>
 
     <div class="container">
-      
-        <script src="js/representants.js"></script>
-      
       <div id="sort">
         <div class="btn-group" role="group" aria-label="...">
           <button type="button" class="btn btn-default">Parties politiques</button>
@@ -54,7 +51,70 @@
          <button type="button" class="btn btn-default">Pourcentage Femme</button>
         </div>
       </div>
-    </div>
+    
+      
+      <div id="canvas-holder">
+        <canvas id="chart-area" width="500" height="300"/>
+      </div>
+
+
+      <script>
+
+        var pieData = [
+            {
+              value: 107,
+              label: "Parti de la justice et du développement (PJD)"
+            },
+            {
+              value: 60,
+              label: "Parti de l'Istiqlal (PI)"
+            },
+            {
+              value: 52,
+              label: "Rassemblement National des Indépendants (RNI)"
+            },
+            {
+              value: 47,
+              label: "Parti authenticité et Modernité (PAM)"
+            },
+            {
+              value: 39,
+              label: "Union socialiste des Forces Populaires (USFP)"
+            },
+            {
+              value: 32,
+              label: "Mouvement populaire (MP)"
+            },
+            {
+              value: 23,
+              label: "Union constitutionnelle (UC)"
+            },
+            {
+              value: 18,
+              label: "Parti du progrès et Socialisme (PPS)"
+            },
+            {
+              value: 4,
+              label: "Parti travailliste (PT)"
+            },
+            {
+              value: 13,
+              label: "Autres"
+            },
+            
+
+
+          ];
+
+          window.onload = function(){
+            var ctx = document.getElementById("chart-area").getContext("2d");
+            window.myPie = new Chart(ctx).Pie(pieData);
+          };
+
+
+
+      </script>
+  </div>
 
     <div class="container">
       <hr>

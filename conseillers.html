@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/animate.css">
 
     <!-- D3.js library -->
-    <script src="js/d3.min.js"></script>
+    <script src="js/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +52,80 @@
         </div>
       </div>
 
-       <script src="js/conseillers.js"></script>
+      <div id="canvas-holder">
+        <canvas id="chart-area" width="500" height="300"/>
+      </div>
+
+
+      <script>
+
+        var pieData = [
+            {
+              value: 24,
+              label: "Parti de l'Istiqlal (PI)"
+            },
+            {
+              value: 23,
+              label: "Parti authenticité et modernité (PAM)"
+            },
+            {
+              value: 12,
+              label: "Parti de la justice et du développement (PJD)"
+            },
+            {
+              value: 10,
+              label: "Mouvement populaire (MP)"
+            },
+            {
+              value: 8,
+              label: "Rassemblement national des indépendants (RNI)"
+            },
+            {
+              value: 8,
+              label: "Indépendants"
+            },
+            {
+              value: 6,
+              label: "Union marocaine du travail (UMT)"
+            },
+            {
+              value: 5,
+              label: "Union socialiste des forces populaires (USFP)"
+            },
+            {
+              value: 4,
+              label: "Confédération démocratique du travail (CDT)"
+            },
+            {
+              value: 4,
+              label: "Union nationale du travail au Maroc (UNTM)"
+            },
+            {
+              value: 3,
+              label: "Union générale des travailleurs au Maroc (UGTM)"
+            },
+            {
+              value: 3,
+              label: "Union constitutionnelle (UC)"
+            },
+            {
+              value: 3,
+              label: "Mouvement démocratique et social (MDS)"
+            },
+            {
+              value: 7,
+              label: "Autres"
+            },
+          ];
+
+          window.onload = function(){
+            var ctx = document.getElementById("chart-area").getContext("2d");
+            window.myPie = new Chart(ctx).Pie(pieData);
+          };
+
+
+
+      </script>
     </div>
 
     <div class="container">
