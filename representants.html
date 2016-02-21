@@ -47,7 +47,6 @@
       <div id="sort">
         <div class="btn-group" role="group" aria-label="...">
           <button type="button" class="btn btn-default">Parties politiques</button>
-          <button type="button" class="btn btn-default">Participation au gouvernement</button>
          <button type="button" class="btn btn-default">Pourcentage Femme</button>
         </div>
       </div>
@@ -60,7 +59,7 @@
 
       <script>
 
-        var pieData = [
+        var Data = [
             {
               value: 107,
               label: "Parti de la justice et du développement (PJD)"
@@ -108,7 +107,10 @@
 
           window.onload = function(){
             var ctx = document.getElementById("chart-area").getContext("2d");
-            window.myPie = new Chart(ctx).Pie(pieData);
+            window.myDoughnut = new Chart(ctx).Doughnut(Data, {
+                          animationEasing : "linear"
+            });
+
           };
 
 

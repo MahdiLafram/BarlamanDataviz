@@ -33,7 +33,7 @@
         <ul class="nav nav-pills nav-justified">
           <li role="presentation" ><a href="index.html">Home</a></li>
           <li class="col-md-2" role="presentation"><a href="representants.html">Chambre des représentants</a></li>
-          <li role="presentation" class="active"><a href="conseillers.html">Chambre des conseillers</a></li>
+          <li role="presentation" class="active"><a href="conseillers.html#parti">Chambre des conseillers</a></li>
           <li class="col-md-2" role="presentation"><a href="about.html">A propos</a></li>
         </ul>
       </div>
@@ -47,7 +47,7 @@
     <div>
       <div id="sort">
         <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default">Parti/Formation politique</button>
+          <button type="button" class="btn btn-default" id="parti">Parti/Formation politique</button>
          <button type="button" class="btn btn-default">Pourcentage Femme</button>
         </div>
       </div>
@@ -59,7 +59,7 @@
 
       <script>
 
-        var pieData = [
+        var Data = [
             {
               value: 24,
               label: "Parti de l'Istiqlal (PI)"
@@ -120,7 +120,9 @@
 
           window.onload = function(){
             var ctx = document.getElementById("chart-area").getContext("2d");
-            window.myPie = new Chart(ctx).Pie(pieData);
+            window.myDoughnut = new Chart(ctx).Doughnut(Data, {
+                          animationEasing : "linear"
+            });
           };
 
 
