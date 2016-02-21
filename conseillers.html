@@ -14,7 +14,7 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate.css">
 
-    <!-- D3.js library -->
+    <!-- Chart.js library -->
     <script src="js/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -50,7 +50,7 @@
       </div>
 
       <div class="col-md-6" id="canvas-holder">
-        <h4><strong>Pourcentage des femmes</strong></h4><br>
+        <h4><strong>Participation des femmes</strong></h4><br>
         <canvas id="chart-area2" width="250" height="130"/>
       </div>
 
@@ -60,58 +60,72 @@
         var Data = [
             {
               value: 24,
+              highlight: "#2c3e50",
               label: "Parti de l'Istiqlal (PI)"
             },
             {
               value: 23,
+              highlight: "#2c3e50",
               label: "Parti authenticité et modernité (PAM)"
             },
             {
               value: 12,
+              highlight: "#2c3e50",
               label: "Parti de la justice et du développement (PJD)"
             },
             {
               value: 10,
+              highlight: "#2c3e50",
               label: "Mouvement populaire (MP)"
             },
             {
               value: 8,
+              highlight: "#2c3e50",
               label: "Rassemblement national des indépendants (RNI)"
             },
             {
               value: 8,
+              highlight: "#2c3e50",
               label: "Indépendants"
             },
             {
               value: 6,
+              highlight: "#2c3e50",
               label: "Union marocaine du travail (UMT)"
             },
             {
               value: 5,
+              highlight: "#2c3e50",
               label: "Union socialiste des forces populaires (USFP)"
             },
             {
               value: 4,
+              highlight: "#2c3e50",
               label: "Confédération démocratique du travail (CDT)"
             },
             {
               value: 4,
+              highlight: "#2c3e50",
               label: "Union nationale du travail au Maroc (UNTM)"
             },
             {
               value: 3,
+              highlight: "#2c3e50",
               label: "Union générale des travailleurs au Maroc (UGTM)"
             },
             {
               value: 3,
+              highlight: "#2c3e50",
               label: "Union constitutionnelle (UC)"
             },
             {
               value: 3,
+              highlight: "#2c3e50",
               label: "Mouvement démocratique et social (MDS)"
             },
             {
               value: 7,
+              highlight: "#2c3e50",
               label: "Autres"
             },
           ];
@@ -120,14 +134,12 @@
             {
               value: 106,
               label: "Hommes",
-              color:"#F7464A",
-              highlight: "#FF5A5E"
+              highlight: "#2c3e50",
             },
             {
               value: 14,
               label: "Femmes",
-              color: "#46BFBD",
-              highlight: "#5AD3D1",
+              highlight: "#2c3e50",
             },
             ];
 

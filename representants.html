@@ -14,7 +14,7 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="css/animate.css">
 
-    <!-- D3.js library -->
+    <!-- Chart.js library -->
     <script src="js/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -53,7 +53,7 @@
       </div>
 
       <div class="col-md-4" id="canvas-holder">
-        <h4><strong>Pourcentage des femmes</strong></h4><br>
+        <h4><strong>Participation des femmes</strong></h4><br>
         <canvas id="chart-area2" width="250" height="200"/>
       </div>
 
@@ -62,61 +62,61 @@
         var Data = [
             {
               value: 107,
+              highlight: "#2c3e50",
               label: "Parti de la justice et du développement (PJD)"
             },
             {
               value: 60,
+              highlight: "#2c3e50",
               label: "Parti de l'Istiqlal (PI)"
             },
             {
               value: 52,
+              highlight: "#2c3e50",
               label: "Rassemblement National des Indépendants (RNI)"
             },
             {
               value: 47,
+              highlight: "#2c3e50",
               label: "Parti authenticité et Modernité (PAM)"
             },
             {
               value: 39,
+              highlight: "#2c3e50",
               label: "Union socialiste des Forces Populaires (USFP)"
             },
             {
               value: 32,
+              highlight: "#2c3e50",
               label: "Mouvement populaire (MP)"
             },
             {
               value: 23,
+              highlight: "#2c3e50",
               label: "Union constitutionnelle (UC)"
             },
             {
               value: 18,
+              highlight: "#2c3e50",
               label: "Parti du progrès et Socialisme (PPS)"
             },
             {
-              value: 4,
-              label: "Parti travailliste (PT)"
-            },
-            {
-              value: 13,
+              value: 17,
+              highlight: "#2c3e50",
               label: "Autres"
             },
-            
-
-
           ];
 
           var DataFemmes = [
             {
               value: 106,
               label: "Hommes",
-              color:"#F7464A",
-              highlight: "#FF5A5E"
+              highlight: "#2c3e50",
             },
             {
               value: 14,
               label: "Femmes",
-              color: "#46BFBD",
-              highlight: "#5AD3D1",
+              highlight: "#2c3e50",
             },
           ];
 
@@ -124,20 +124,17 @@
             {
               value: 209,
               label: "Oui",
-              color:"#F7464A",
-              highlight: "#FF5A5E"
+              highlight: "#2c3e50",
             },
             {
               value: 11,
               label: "Soutien",
-              color: "#46BFBD",
-              highlight: "#5AD3D1",
+              highlight: "#2c3e50",
             },
             {
               value: 175,
               label: "Opposition",
-              color: "#FDB45C",
-              highlight: "#FFC870",
+              highlight: "#2c3e50",
             },
           ];
 
