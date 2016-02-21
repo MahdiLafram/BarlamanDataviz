@@ -42,20 +42,20 @@
       <h1 class="animated fadeInDown"><strong>Chambre des représentants</strong></h1>
       <hr>
     </div>
-
-    <div class="container">
-      <div id="sort">
-        <div class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default">Parties politiques</button>
-         <button type="button" class="btn btn-default">Pourcentage Femme</button>
-        </div>
-      </div>
-    
-      
-      <div id="canvas-holder">
-        <canvas id="chart-area" width="500" height="300"/>
+      <div class="col-md-4" id="canvas-holder">
+        <h4><strong>Participation au gouvernement</strong></h4><br>
+        <canvas id="chart-area3" width="250" height="200"/>
       </div>
 
+      <div class="col-md-4" id="canvas-holder">
+        <h4><strong>Partis politiques</strong></h4><br>
+        <canvas id="chart-area" width="250" height="200"/>
+      </div>
+
+      <div class="col-md-4" id="canvas-holder">
+        <h4><strong>Pourcentage des femmes</strong></h4><br>
+        <canvas id="chart-area2" width="250" height="200"/>
+      </div>
 
       <script>
 
@@ -105,21 +105,64 @@
 
           ];
 
+          var DataFemmes = [
+            {
+              value: 106,
+              label: "Hommes",
+              color:"#F7464A",
+              highlight: "#FF5A5E"
+            },
+            {
+              value: 14,
+              label: "Femmes",
+              color: "#46BFBD",
+              highlight: "#5AD3D1",
+            },
+          ];
+
+          var DataGov = [
+            {
+              value: 209,
+              label: "Oui",
+              color:"#F7464A",
+              highlight: "#FF5A5E"
+            },
+            {
+              value: 11,
+              label: "Soutien",
+              color: "#46BFBD",
+              highlight: "#5AD3D1",
+            },
+            {
+              value: 175,
+              label: "Opposition",
+              color: "#FDB45C",
+              highlight: "#FFC870",
+            },
+          ];
+
           window.onload = function(){
             var ctx = document.getElementById("chart-area").getContext("2d");
             window.myDoughnut = new Chart(ctx).Doughnut(Data, {
-                          animationEasing : "linear"
+                          animationEasing : "linear", responsive : true,
             });
-
-          };
-
+            var cty = document.getElementById("chart-area2").getContext("2d");
+            window.myDoughnut = new Chart(cty).Doughnut(DataFemmes, {
+                          animationEasing : "linear", responsive : true,
+            });
+            var ctz = document.getElementById("chart-area3").getContext("2d");
+            window.myDoughnut = new Chart(ctz).Doughnut(DataGov, {
+                          animationEasing : "linear", responsive : true,
+            });
+        };
 
 
       </script>
   </div>
 
+
     <div class="container">
-      <hr>
+      <div class="col-md-12"><hr></div>
       <p>(c) <a href="http://ma.linkedin.com/in/mahdilafram">Mahdi Lafram</a>, 2016.</p>
     </div>
   </body>
