@@ -7,7 +7,7 @@ body {
 
 
 ::selection {
-	background-color: #b92b27;
+	background-color: #ea4335;
 	color: white;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-	background-color: #b92b27;
+	background-color: #ea4335;
 }
 
 #logo {
@@ -29,7 +29,7 @@ a {
 }
 
 h1 {
-	color: #b92b27;
+	color: #ea4335;
 }
 
 h4 {
@@ -37,7 +37,7 @@ h4 {
 }
 
 a:hover {
-	color: #b92b27;
+	color: #ea4335;
 }
 
 .nav {
