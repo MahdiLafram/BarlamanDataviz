@@ -7,7 +7,7 @@ body {
 
 
 ::selection {
-	background-color: #ea4335;
+	background-color: #222;
 	color: white;
 }
 
@@ -19,9 +19,26 @@ body {
 	background-color: #ea4335;
 }
 
+.nav-pills>li:hover>a {
+	background-color: #ea4335;
+	color: white;
+}
+
 #logo {
-	width: 340px;
-	height: 140px;
+	text-align: center;
+	font-size: 3.2em;
+	width: 350px;
+	height: 150px;
+	border-radius: 42px;
+	border: 5px solid #34a853;
+	display: inline-block;
+}
+
+#logo:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #ea4335;
+	border: 10px solid #34a853;
 }
 
 a {
@@ -30,6 +47,10 @@ a {
 
 h1 {
 	color: #ea4335;
+}
+
+h2 {
+	color: #34a853;
 }
 
 h4 {
@@ -45,9 +66,27 @@ a:hover {
 }
 
 #footer {
-	padding-top: 60px;
+	padding-top: 10px;
 }
 
 #section-index {
-	padding-top: 60px;
+	padding-top: 10px;
+}
+
+#arabic-section {
+	color: #222;
+	width: 200px;
+	font-weight: bold;
+	display: inline-block;
+    border-radius: 42px;
+}
+ 
+ #arabic-section:hover {
+ 	background-color: #222;
+	color: white;
+}
+
+#index-nav:hover {
+	color: white;
+	background-color: #ea4335;
 }

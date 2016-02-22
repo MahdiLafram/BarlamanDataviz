@@ -1,0 +1,82 @@
+<head>
+    <meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chambre des conseillers</title>
+    <link rel="icon" href="img/fav.png">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Chart.js library -->
+    <script src="js/Chart.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    <div class="nav">
+        <ul class="nav nav-pills nav-justified">
+          <li role="presentation" ><a href="index.html">Home</a></li>
+          <li class="col-md-2" role="presentation"><a href="representants.html">Chambre des représentants</a></li>
+          <li role="presentation" class="active"><a href="conseillers.html">Chambre des conseillers</a></li>
+          <li class="col-md-2" role="presentation"><a href="about.html">A propos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="animated fadeInDown"><strong>Chambre des conseillers</strong></h1>
+      <hr>
+    </div>
+
+      <div style="width:40%" class="align-center thumbnail">
+      <div>
+        <canvas id="canvas" height="450" width="600"></canvas>
+      </div>
+    </div>
+
+
+      <script>
+//var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+    var lineChartData = {
+      labels : ["1963", "1970", "1977", "1984", "1993", "1997", "2002", "2007", "2011"],
+      datasets : [
+        {
+          fillColor : "#EA4335",
+          data : ["144", "240", "264", "306", "333", "325", "325", "325", "395"]
+        },
+      ]
+
+    }
+
+  window.onload = function(){
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myLine = new Chart(ctx).Line(lineChartData, {
+      responsive: true
+    });
+  }
+
+      </script>
+    </div> 
+    <div class="container">
+      <div class="col-md-12"><hr></div>
+      <p>(c) <a href="http://ma.linkedin.com/in/mahdilafram">Mahdi Lafram</a>, 2016.</p>
+    </div>
+
+  </body>
+</html>
