@@ -1,0 +1,30 @@
+* {
+	font-family: serif, "arial";
+}
+
+li {
+	font-size: medium;
+	font-weight: bold;
+}
+
+#index-nav {
+	font-size: 1.1em;
+}
+
+h4 {
+	font-size: large;
+	font-weight: bold;
+}
+
+#french-section {
+	font-family:'Roboto', Helvetica, Arial, sans-serif;
+}
+
+#footer-ar,p {
+	font-size: medium;
+}
+
+#about-ar,p {
+	font-size: large;
+}
+
