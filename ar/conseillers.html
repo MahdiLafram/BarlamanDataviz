@@ -1,0 +1,163 @@
+<head>
+    <meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مجلس المستشارين</title>
+    <link rel="icon" href="../img/fav.png">
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <!-- Chart.js library -->
+    <script src="../js/Chart.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    <div class="nav">
+        <ul class="nav nav-pills nav-justified">
+          <li class="col-md-2" role="presentation"><a href="about.html">نبذة مختصرة</a></li>
+          <li role="presentation" class="active"><a href="conseillers.html">مجلس المستشارين</a></li>
+          <li class="col-md-2" role="presentation"><a href="representants.html">مجلس النواب</a></li>
+          <li role="presentation" ><a href="index.html">الرئيسية</a></li>                          
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="animated fadeInDown"><strong>مجلس المستشارين</strong></h1>
+      <hr>
+    </div>
+
+      <div class="col-md-6" id="canvas-holder">
+        <h4><strong>توزيع المقاعد</strong></h4><br>
+        <canvas id="chart-area" width="250" height="130"/>
+      </div>
+
+      <div class="col-md-6" id="canvas-holder">
+        <h4><strong>تمثيلية النساء</strong></h4><br>
+        <canvas id="chart-area2" width="250" height="130"/>
+      </div>
+
+
+      <script>
+
+        var Data = [
+            {
+              value: 24,
+              color: "#f15b40",
+              highlight: "#ed1e24",
+              label: "حزب الاستقلال",
+            },
+            {
+              value: 23,
+              color: "#fdb64e",
+              highlight: "#fba51a",
+              label: "حزب الأصالة والمعاصرة",
+            },
+            {
+              value: 12,
+              color: "#f7ee61",
+              highlight: "#f4eb20",
+              label: "حزب العدالة والتنمية",
+            },
+            {
+              value: 10,
+              color: "#aed361",
+              highlight: "#9bca3c",
+              label: "الحركة الشعبية",
+            },
+            {
+              value: 8,
+              color: "#8ed0b5",
+              highlight: "#70c5a4",
+              label: "التجمع الوطني للأحرار",
+            },
+            {
+              value: 8,
+              color: "#70c3ed",
+              highlight: "#40b8ea",
+              label: "Indépendants",
+            },
+            {
+              value: 6,
+              color: "#6783c2",
+              highlight: "#436fb6",
+              label: "Union Marocaine du Travail (UMT)",
+            },
+            {
+              value: 5,
+              color: "#756bb0",
+              highlight: "#5b52a3",
+              label: "الاتحاد الاشتراكي للقوات الشعبية",
+            },
+            {
+              value: 4,
+              color: "#9a6db0",
+              highlight: "#87519f",
+              label: "Confédération Démocratique du Travail (CDT)",
+            },
+            {
+              value: 4,
+              color: "#d671ad",
+              highlight: "#d1499b",
+              label: "Union Nationale du Travail au Maroc (UNTM)",
+            },
+            {
+              value: 16,
+              color: "#f15f90",
+              highlight: "#ec197a",
+              label: "أحزاب أخرى",
+            },
+          ];
+
+          var DataFemmes = [
+            {
+              value: 106,
+              label: "رجال",
+              color: "#70c3ed",
+              highlight: "#40b8ea",
+            },
+            {
+              value: 14,
+              label: "نساء",
+              color: "#8ec975",
+              highlight: "#71c055",
+            },
+            ];
+
+
+          window.onload = function(){
+            var ctx = document.getElementById("chart-area").getContext("2d");
+            window.myDoughnut = new Chart(ctx).Doughnut(Data, {
+                          animationEasing : "linear",responsive : true
+            });
+            var cty= document.getElementById("chart-area2").getContext("2d");
+            window.myDoughnut = new Chart(cty).Doughnut(DataFemmes, {
+                          animationEasing : "linear",responsive : true
+            });
+          };
+      </script>
+    </div> 
+    <div class="container">
+      <div class="col-md-12"><hr></div>
+      <p>(c) <a href="http://ma.linkedin.com/in/mahdilafram">Mahdi Lafram</a>, 2016.</p>
+    </div>
+
+  </body>
+</html>
