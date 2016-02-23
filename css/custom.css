@@ -26,12 +26,13 @@ body {
 }
 
 #logo {
+	padding-top: 2px;
 	text-align: center;
 	font-size: 3.2em;
 	width: 350px;
-	height: 150px;
-	border-radius: 42px;
-	border: 5px solid #34a853;
+	height: 140px;
+	border-radius: 50px;
+	border: 9px solid #34a853;
 	display: inline-block;
 }
 
@@ -39,7 +40,7 @@ body {
 	color: white;
 	text-decoration: none;
 	background-color: #ea4335;
-	border: 10px solid #34a853;
+	border: 12px solid #34a853;
 }
 
 a {
