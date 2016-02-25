@@ -1,19 +1,16 @@
 # Barlaman Dataviz
 Interactive data visualization of Moroccan parliament components
+Demo: http://mahdilafram.github.io/BarlamanDataviz
+Hosted on GitHub Pages
 
 # Implementation
-- D3.js (http://d3js.org)
+- Chart.js (http://d3js.org)
 - Bootstrap (http://getbootstrap.com)
 - Animate.css (https://daneden.github.io/animate.css)
 
 # Data Sources
-## Statistiques:
 - Chambre des représentants' components: https://fr.wikipedia.org/wiki/Chambre_des_représentants_(Maroc)
 - Chambre des conseillers' components: http://www.ipu.org/parline-f/reports/1222.htm
-
-## Images:
-- Chambre des représentants' logo: http://www.chambredesrepresentants.ma
-- Chambre des conseillers' logo: http://www.chambredesconseillers.ma
 
 # Contributions and Feedback
 - Shoot me an email at: elmahdi.lafram@gmail.com
