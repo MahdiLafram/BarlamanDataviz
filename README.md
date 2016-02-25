@@ -1,10 +1,10 @@
 # Barlaman Dataviz
-Interactive data visualization of Moroccan parliament components
-Demo: http://mahdilafram.github.io/BarlamanDataviz
+- Interactive data visualization of Moroccan parliament components
+- Demo: http://mahdilafram.github.io/BarlamanDataviz
 Hosted on GitHub Pages
 
 # Implementation
-- Chart.js (http://d3js.org)
+- Chart.js (http://chartjs.org)
 - Bootstrap (http://getbootstrap.com)
 - Animate.css (https://daneden.github.io/animate.css)
 
