@@ -1,12 +1,12 @@
 # Barlaman Dataviz
 - Interactive data visualization of Moroccan parliament components
 - Demo: http://mahdilafram.github.io/BarlamanDataviz
-Hosted on GitHub Pages
 
 # Implementation
 - Chart.js (http://chartjs.org)
 - Bootstrap (http://getbootstrap.com)
 - Animate.css (https://daneden.github.io/animate.css)
+- Google Fonts (https://www.google.com/fonts)
 
 # Data Sources
 - Chambre des représentants' components: https://fr.wikipedia.org/wiki/Chambre_des_représentants_(Maroc)
