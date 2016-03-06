@@ -6,7 +6,6 @@
 - Chart.js (http://chartjs.org)
 - Bootstrap (http://getbootstrap.com)
 - Animate.css (https://daneden.github.io/animate.css)
-- Google Fonts (https://www.google.com/fonts)
 
 # Data Sources
 - Chambre des représentants' components: https://fr.wikipedia.org/wiki/Chambre_des_représentants_(Maroc)
